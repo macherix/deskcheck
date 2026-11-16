@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deskcheck"
+version = "0.1.0"
+description = "MCP server that lets AI coding agents launch, see, click and measure Linux desktop apps"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "DeskCheck contributors" }]
+keywords = ["mcp", "model-context-protocol", "claude-code", "linux", "gui-testing", "at-spi", "accessibility"]
+dependencies = []  # needs the system PyGObject + AT-SPI (python-gobject, at-spi2-core)
+
+[project.scripts]
+deskcheck = "deskcheck.server:main"
